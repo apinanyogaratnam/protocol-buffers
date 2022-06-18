@@ -1,4 +1,4 @@
-syntax = "proto3"
+syntax = "proto3";
 
 service SquareRootService {
     rpc SquareRoot(Number) returns (Result);
