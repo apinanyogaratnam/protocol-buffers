@@ -6,7 +6,8 @@ from concurrent import futures
 
 class SquareRootServiceServicer(square_root_pb2_grpc.SquareRootServiceServicer):
     def SquareRoot(self, request, context):
-        return super().SquareRoot(request, context)
+        result = request.input ** 0.5
+        return square_root_pb2.Result(result=result)
 
 
 def main():
